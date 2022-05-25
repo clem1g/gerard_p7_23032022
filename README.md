@@ -54,12 +54,25 @@ Voici les exigences du comité de direction :
     b.Axios
     d.Boostrap Vue
 
-## pour lancer le projet
+## Pour lancer le projet
 
-Installez nodes et les dépendances de chaque dossier puis
-cd frontend && npm run serve
-cd backend && nodemon 
+- Il faut créer un dossier "images" dans le dossier backend
+
+ Installez nodes et les dépendances de chaque dossier 
+- cd frontend puis npm i
+- cd backend puis npm i 
+
+
+Ensuite lancer l'excution de chaque dossier :
+
+- cd frontend && npm run serve
+
+- cd backend && nodemon server
 
 ==> http://localhost:8000/
 
-La base de données etant en local dans le cadre de ce MVP, les fichiers de migrations sont dans le repertoire. Il vous suffira des les importer dans votre ORM SQL
+La base de données etant en local dans le cadre de ce MVP, les fichiers de migrations et de models sont dans le repertoire. Il vous suffira des les importer dans votre ORM SQL
+Il faut pour cela executer  : 
+- npx sequelize-cli db:migrate
+
+Pour plus d'information concernant la création de la base de données : https://sequelize.org/docs/v6/other-topics/migrations/
